@@ -20,7 +20,7 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('terlaris/rumah malay.jpg')",
         "footer-texture": "url('img/rumah afrika.jpg')",
-        "hero-landing": "url('img/hero.jpg')",
+        "hero-landing": "url('dist/img/hero.jpg')",
       },
       backgroundSize: {
         auto: "auto",
