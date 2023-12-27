@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="dist/output.css" />
+    <!-- icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@100;300&display=swap" rel="stylesheet" />
+  </head>
+  <body class="h-[3000px]">
+    <!-- navbar -->
+    <header class="w-full fixed bg-secondary flex justify-between text-white px-4 z-50 h-8 items-center lg:px-8 lg:h-10">
+      <div class="">
+        <a href="" class="font-bold lg:text-2xl">NI<span>MART</span></a>
+      </div>
+      <nav class="absolute top-full bg-white w-1/2 -right-72 duration-300 px-4 h-screen transition-all lg:static lg:h-auto lg:bg-transparent lg:w-auto lg:text-xl lg:flex justify-between items-center gap-4" id="menu-nav">
+        <a href="#" class="block py-1 font-light hover:text-primary hover:shadow-md border-b-2 hover:border-secondary duration-200 lg:inline-block lg:p-0 lg:border-none">home</a>
+        <a href="#" class="block py-1 font-light hover:text-primary hover:shadow-md border-b-2 hover:border-secondary duration-200 lg:inline-block lg:p-0 lg:border-none">kategori</a>
+        <a href="#" class="block py-1 font-light hover:text-primary hover:shadow-md border-b-2 hover:border-secondary duration-200 lg:inline-block lg:p-0 lg:border-none"> terlaris</a>
+        <a href="#" class="block py-1 font-light hover:text-primary hover:shadow-md border-b-2 hover:border-secondary duration-200 lg:inline-block lg:p-0 lg:border-none">terbaru</a>
+      </nav>
+      <div class="absolute -top-10 opacity-15 left-32 transition-all duration-300 -z-10 lg:left-[68%] lg:w-[500px]" id="search">
+        <input type="search" name="search" id="search-box" placeholder="search here" class="w-44 rounded-b-md px-4 py-1 text-white lg:w-2/3" />
+      </div>
+      <div class="flex gap-4 pe-4">
+        <a href="#" id="ts" class="icon-s text-xl hover:text-black hover:shadow-lg"><i data-feather="search" class="w-5 font-bold"></i></a>
+        <a href="#" id="tc" class="text-xl hover:text-black hover:shadow-lg"><i data-feather="shopping-cart" class="w-5 font-bold"></i></a>
+        <a href="#" id="hamburger" class="lg:hidden"><i data-feather="menu" class="w-5 font-bold"></i></a>
+      </div>
+      <div class="w-52 h-screen bg-white absolute top-full -right-72 transition-all duration-300" id="cart-menu">agdkauwgd</div>
+    </header>
+
+    <!-- hero -->
+    <section class="w-full pb-4 bg-hero-pattern lg:bg-hero-landing bg-cover bg-no-repeat bg-center pt-24 lg:pt-40 lg:object-fill">
+      <div class="container">
+        <div class="flex flex-wrap justify-center items-center lg:px-4 lg:justify-center w-full">
+          <div class="flex flex-wrap justify-around items-center ms-10 w-full lg:ps-72 lg:justify-center">
+            <a href="#" class="w-1/2 text-primary px-4 text-base inline-block lg:ps-14 font-semibold">PRODUK</a>
+            <a href="#" class="w-1/2 text-primary text-base inline-block lg:ps-14 font-semibold">LAYANAN</a>
+          </div>
+
+          <div class="w-full mt-8 mx-auto block">
+            <input type="search" class="w-full rounded-full py-2 px-8 lg:w-5/6 mx-auto block" />
+            <button type="button" class="bg-primary rounded-full px-8 py-2 mt-4 block ms-auto lg:me-24">search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- marketing -->
+    <section class="w-full flex justify-between">
+      <!-- crousel -->
+      <div class="relative w-full lg:w-1/2 h-[205px] lg:h-full object-cover">
+        <div class="absolute -z-10 w-full h-full lg:h-[400px] object-cover object-right slide active transition-all duration-300">
+          <img src="dist/img/nicolas-gonzalez-183F_vNaN8A-unsplash.jpg" class="h-full object-cover w-full z-10 rounded-b-lg" alt="" srcset="" />
+        </div>
+        <div class="object-cover object-right absolute -z-10 w-full slide active transition-all duration-300 h-full lg:h-[400px]">
+          <img src="dist/img/c-d-x-PDX_a_82obo-unsplash.jpg" class="h-full object-cover z-10 w-full rounded-b-lg" alt="" srcset="" />
+        </div>
+        <div class="absolute -z-10 w-full slide active transition-all duration-300 h-full lg:h-[400px] object-cover object-right">
+          <img src="dist/img/ed-rojas-quvUXEIlE3U-unsplash.jpg" class="h-full object-cover z-10 w-full rounded-b-lg" alt="" srcset="" />
+        </div>
+        <div class="absolute -z-10 w-full slide active transition-all duration-300 h-full lg:h-[400px] object-cover object-right slide active">
+          <img src="dist/img/howard-bouchevereau-Db-tzBhd500-unsplash.jpg" class="h-full object-cover z-10 w-full rounded-b-lg" alt="" srcset="" />
+        </div>
+        <div class="absolute -z-10 w-full slide active transition-all duration-300 h-full lg:h-[400px] object-cover object-right">
+          <img src="dist/img/maar-gaming-fG4BTSKPo3w-unsplash.jpg" class="h-full z-10 w-full rounded-b-lg object-fill object-center" alt="" srcset="" />
+        </div>
+        <div class="z-10 absolute flex left-1/2 -translate-x-1/2 top-40 lg:top-[19rem]">
+          <div class="bg-slate-100 w-4 h-4 m-2 rounded-full opacity-30 cursor-pointer hover:bg-slate-200 hover:opacity-50 btn active"></div>
+          <div class="cursor-pointer bg-slate-100 w-4 h-4 m-2 rounded-full opacity-30 hover:bg-slate-200 hover:opacity-50 btn active"></div>
+          <div class="cursor-pointer bg-slate-100 w-4 h-4 m-2 rounded-full opacity-30 hover:bg-slate-200 hover:opacity-50 btn active"></div>
+          <div class="cursor-pointer bg-slate-100 w-4 h-4 m-2 rounded-full opacity-30 hover:bg-slate-200 hover:opacity-50 btn active"></div>
+          <div class="cursor-pointer bg-slate-100 w-4 h-4 m-2 rounded-full opacity-30 hover:bg-slate-200 hover:opacity-50 btn active"></div>
+        </div>
+      </div>
+
+      <!-- marketing bagian kanan -->
+      <section class="lg:w-1/2 w-full">
+        <!-- kategori -->
+        <div class="w-full px-4 flex flex-wrap justify-center items-center gap-8 bg-secondary p-8">
+          <!-- monitor -->
+          <span class="p-0 text-center hover:scale-105 hover:drop-shadow-xl">
+            <a href="#">
+              <svg class="w-[30px] mx-auto" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve">
+                <path
+                  style="fill: #ccd8e5"
+                  d="M503.665,66.8v316.343c0,17.908-14.509,32.429-32.417,32.429H40.754
+c-17.909,0-32.418-14.52-32.418-32.429V66.8c0-17.909,14.509-32.429,32.418-32.429h430.493
+C489.155,34.371,503.665,48.891,503.665,66.8z"
+                />
+                <path
+                  style="fill: #dfeaf4"
+                  d="M503.665,66.8v316.343c0,17.908-14.509,32.429-32.417,32.429H183.344l23.752-57.925L339.655,34.371
+h131.592C489.155,34.371,503.665,48.891,503.665,66.8z"
+                />
+                <path
+                  style="fill: #b8e9f2"
+                  d="M503.665,66.8v290.847H8.337V66.8c0-17.909,14.509-32.429,32.418-32.429h430.493
+C489.155,34.371,503.665,48.891,503.665,66.8z"
+                />
+                <path style="fill: #d4f7fc" d="M503.665,66.8v290.847H207.097L339.655,34.371h131.592C489.155,34.371,503.665,48.891,503.665,66.8z" />
+                <polygon
+                  style="fill: #ccd8e5"
+                  points="343.454,480.173 168.547,480.173 181.034,450.955 196.165,415.571 315.836,415.571 
+330.967,450.955 "
+                />
+                <polygon style="fill: #bac6d1" points="330.967,450.955 181.034,450.955 196.165,415.571 315.836,415.571 " />
+                <path
+                  d="M471.246,24.766H40.754C18.283,24.766,0,43.049,0,65.52v59.227c0,4.602,3.731,8.332,8.332,8.332s8.332-3.731,8.332-8.332
+V65.52c0-13.284,10.807-24.09,24.09-24.09h430.492c13.284,0,24.09,10.807,24.09,24.09v284.411h-52.21
+c-4.602,0-8.332,3.731-8.332,8.332c0,4.602,3.731,8.332,8.332,8.332h52.21v15.273c0,13.284-10.807,24.09-24.09,24.09h-155.41
+H196.164H40.754c-13.284,0-24.09-10.807-24.09-24.09v-15.273h398.688c4.602,0,8.332-3.731,8.332-8.332
+c0-4.602-3.731-8.332-8.332-8.332H16.664V152.522c0-4.602-3.731-8.332-8.332-8.332S0,147.92,0,152.522v229.348
+c0,22.472,18.283,40.754,40.754,40.754H183.54l-20.494,47.945h-40.034c-4.602,0-8.332,3.731-8.332,8.332
+c0,4.602,3.731,8.332,8.332,8.332h265.975c4.602,0,8.332-3.731,8.332-8.332c0-4.602-3.731-8.332-8.332-8.332h-40.034l-20.494-47.945
+h142.786c22.472,0,40.754-18.282,40.754-40.754V65.52C512,43.049,493.717,24.766,471.246,24.766z M181.17,470.568l14.238-33.31
+h121.184l14.238,33.31H181.17z"
+                />
+                <path
+                  d="M262.925,379.678c-1.914-2.906-5.583-4.298-8.952-3.457c-3.517,0.879-6.116,4.048-6.291,7.67
+c-0.364,7.534,9.106,11.629,14.33,6.172C264.674,387.282,265.089,382.887,262.925,379.678z"
+                />
+              </svg>
+              <p>monitor</p>
+            </a>
+          </span>
+          <!-- maouse -->
+          <span class="text-center hover:scale-105 hover:drop-shadow-xl">
+            <a href="#">
+              <svg class="w-[30px] mx-auto" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <path style="fill: #444; stroke: #333" d="M 29,19 C 26,15 23,16 18,15 10,14 5.7,8.5 4.7,-0.42 l 5.1,-0 C 9.8,-0.43 8.9,10 22,11 c 6,0 9,2 11,6 1,1 -4,2 -4,2 z" />
+                <path style="fill: #444; stroke: #333; stroke-width: 2" d="m 67,20 c 14,9 26,24 30,39 2,9 3,26 -11,33 C 71,99 57,100 41,88 26,76 12,59 6.8,52 3.4,48 1.9,44 2.5,37 2.4,32 2.2,31 13,25 36,15 46,16 54,16 c 7,0 13,4 13,4 z" />
+                <path
+                  style="fill: #626262; stroke: #ccc"
+                  d="m 81,32 c 2,5 -20,11 -20,11 0,0 -12,-19 -28,-25 0,0 12,-2 19,-2 5,0 10,0 19,6 6,5 10,10 10,10 z M 8.4,28 C 19,32 29,44 31,48 c 2,3 2,4 10,3 8,-1 19,-8 19,-8 C 60,43 48,24 32,18 27,20 15,24 8.4,28 z"
+                />
+                <path style="fill: #333; stroke: #ccc; stroke-width: 1.5" d="M 40,22 C 37,25 49,36 52,32 56,29 45,19 40,22 z" />
+                <path style="fill: none; stroke: #222; stroke-width: 2" d="m 67,20 c 14,9 26,24 30,39 2,9 3,26 -11,33 C 71,99 57,100 41,88 26,76 12,59 6.8,52 3.4,48 1.9,44 2.5,37 2.4,32 2.2,31 13,25 36,15 46,16 54,16 c 7,0 13,4 13,4 z" />
+                <path style="fill: #ccc" d="M 32,53 C 43,77 76,92 96,64 80,98 39,84 32,53 z" />
+
+                <path style="fill: none; stroke: #222222; stroke-width: 2" d="M 72,4 C 86,8 94,18 98,29 M 67,11 c 11,4 19,9 24,20 M 1.2,67 C 5.8,80 15,89 26,97 M 7.1,64 C 13,75 18,80 25,86" />
+              </svg>
+              <p>mouse</p>
+            </a>
+          </span>
+          <!-- keyboard -->
+          <span class="text-center hover:scale-105 hover:drop-shadow-xl">
+            <a href="#">
+              <svg viewBox="0 0 1024 1024" class="icon w-[30px] mx-auto" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M974.256189 160.040161v484.13899c0 31.585402-25.607193 57.192595-57.192594 57.192595H115.823796c-31.585402 0-57.192595-25.607193-57.192595-57.192595V160.040161c0-31.585402 25.607193-57.192595 57.192595-57.192595h801.239799c31.585402 0 57.192595 25.607193 57.192594 57.192595z m-64.609409 294.498704v-269.051356h-94.820143V359.750692h-139.41694v94.788173h234.237083z m-0.543474 163.361744v-94.788174h-94.820143v94.788174h94.820143z m-138.873466-337.624926v-94.788174h-94.820143v94.788174h94.820143z m-28.868034 337.624926v-94.788174H284.42846v94.788174H741.361806z m-110.548906-163.361744v-94.788173h-94.788174v94.788173h94.788174z m0-174.263182v-94.788174h-94.788174v94.788174h94.788174z m-139.41694 174.263182v-94.788173h-94.788174v94.788173h94.788174z m0-174.263182v-94.788174h-94.788174v94.788174h94.788174z m-139.384971 174.263182v-94.788173H257.190846v94.788173h94.820143z m0-174.263182v-94.788174H257.190846v94.788174h94.820143zM212.59405 617.900609v-94.788174H117.773907v94.788174H212.59405z m0-163.361744v-94.788173H117.773907v94.788173H212.59405z m0-174.263182v-94.788174H117.773907v94.788174H212.59405z"
+                  fill="#FFB578"
+                />
+                <path d="M909.64678 280.275683v174.263182h-234.237083v-94.788173h139.41694V185.487509h94.820143v65.344697z" fill="#FF4893" />
+                <path d="M814.283163 523.112435h94.820143v94.788174h-94.820143zM675.409697 185.487509h94.820143v94.788174h-94.820143z" fill="#8B87C1" />
+                <path d="M284.42846 523.112435H741.361806v94.788174H284.42846z" fill="#FF4893" />
+                <path
+                  d="M536.024726 359.750692h94.788174v94.788173h-94.788174zM536.024726 185.487509h94.788174v94.788174h-94.788174zM396.607786 359.750692h94.788174v94.788173h-94.788174zM396.607786 185.487509h94.788174v94.788174h-94.788174zM257.190846 359.750692h94.820143v94.788173H257.190846zM257.190846 185.487509h94.820143v94.788174H257.190846zM117.773907 523.112435H212.59405v94.788174H117.773907zM117.773907 359.750692H212.59405v94.788173H117.773907zM117.773907 185.487509H212.59405v94.788174H117.773907z"
+                  fill="#8B87C1"
+                />
+                <path
+                  d="M917.063595 723.750067H115.823796c-43.877494 0-79.570916-35.696619-79.570916-79.574112V160.040161c0-43.877494 35.696619-79.570916 79.570916-79.570916h801.239799c43.877494 0 79.570916 35.696619 79.570915 79.570916V644.175955c0 43.877494-35.693422 79.574113-79.570915 79.574112zM115.823796 125.225887c-19.197403 0-34.814274 15.616871-34.814274 34.814274V644.175955c0 19.197403 15.616871 34.817471 34.814274 34.81747h801.239799c19.197403 0 34.814274-15.620068 34.814273-34.81747V160.040161c0-19.197403-15.616871-34.814274-34.814273-34.814274H115.823796z"
+                  fill="#4F46A3"
+                />
+                <path
+                  d="M212.59405 302.654004H117.773907a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788174a22.378321 22.378321 0 0 1 22.378321-22.378321H212.59405a22.378321 22.378321 0 0 1 22.378321 22.378321v94.788174a22.378321 22.378321 0 0 1-22.378321 22.378321z m-72.441822-44.756642H190.215729v-50.031532H140.152228v50.031532zM770.22984 302.654004h-94.820143a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788174a22.378321 22.378321 0 0 1 22.378321-22.378321h94.820143a22.378321 22.378321 0 0 1 22.378321 22.378321v94.788174a22.378321 22.378321 0 0 1-22.378321 22.378321z m-72.441822-44.756642h50.063501v-50.031532h-50.063501v50.031532z"
+                  fill="#4F46A3"
+                />
+                <path
+                  d="M630.8129 302.654004h-94.788174a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788174a22.378321 22.378321 0 0 1 22.378321-22.378321h94.788174a22.378321 22.378321 0 0 1 22.378321 22.378321v94.788174a22.378321 22.378321 0 0 1-22.378321 22.378321z m-72.409853-44.756642h50.031532v-50.031532h-50.031532v50.031532z"
+                  fill="#4F46A3"
+                />
+                <path
+                  d="M491.39596 302.654004h-94.788174a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788174a22.378321 22.378321 0 0 1 22.378321-22.378321h94.788174a22.378321 22.378321 0 0 1 22.378321 22.378321v94.788174a22.378321 22.378321 0 0 1-22.378321 22.378321z m-72.409853-44.756642h50.031532v-50.031532h-50.031532v50.031532z"
+                  fill="#4F46A3"
+                />
+                <path
+                  d="M352.010989 302.654004H257.190846a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788174a22.378321 22.378321 0 0 1 22.378321-22.378321h94.820143a22.378321 22.378321 0 0 1 22.378321 22.378321v94.788174a22.378321 22.378321 0 0 1-22.378321 22.378321z m-72.441822-44.756642h50.063501v-50.031532H279.569167v50.031532zM212.59405 476.917186H117.773907a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788173a22.378321 22.378321 0 0 1 22.378321-22.378321H212.59405a22.378321 22.378321 0 0 1 22.378321 22.378321v94.788173a22.378321 22.378321 0 0 1-22.378321 22.378321z m-72.441822-44.756642H190.215729v-50.031531H140.152228v50.031531zM630.8129 476.917186h-94.788174a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788173a22.378321 22.378321 0 0 1 22.378321-22.378321h94.788174a22.378321 22.378321 0 0 1 22.378321 22.378321v94.788173a22.378321 22.378321 0 0 1-22.378321 22.378321z m-72.409853-44.756642h50.031532v-50.031531h-50.031532v50.031531z"
+                  fill="#4F46A3"
+                />
+                <path
+                  d="M491.39596 476.917186h-94.788174a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788173a22.378321 22.378321 0 0 1 22.378321-22.378321h94.788174a22.378321 22.378321 0 0 1 22.378321 22.378321v94.788173a22.378321 22.378321 0 0 1-22.378321 22.378321z m-72.409853-44.756642h50.031532v-50.031531h-50.031532v50.031531z"
+                  fill="#4F46A3"
+                />
+                <path
+                  d="M352.010989 476.917186H257.190846a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788173a22.378321 22.378321 0 0 1 22.378321-22.378321h94.820143a22.378321 22.378321 0 0 1 22.378321 22.378321v94.788173a22.378321 22.378321 0 0 1-22.378321 22.378321z m-72.441822-44.756642h50.063501v-50.031531H279.569167v50.031531zM909.64678 476.917186h-234.237083a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788173a22.378321 22.378321 0 0 1 22.378321-22.378321h117.035422v-151.884862a22.378321 22.378321 0 0 1 22.378321-22.378321h94.820143a22.378321 22.378321 0 0 1 22.378321 22.378321v269.051356a22.371927 22.371927 0 0 1-22.375124 22.378321z m-211.858762-44.756642h189.480441v-224.294714h-50.063501v151.884862a22.378321 22.378321 0 0 1-22.378321 22.378321h-117.038619v50.031531zM212.59405 640.27893H117.773907a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788174a22.378321 22.378321 0 0 1 22.378321-22.378321H212.59405a22.378321 22.378321 0 0 1 22.378321 22.378321v94.788174a22.378321 22.378321 0 0 1-22.378321 22.378321z m-72.441822-44.756642H190.215729v-50.031532H140.152228v50.031532zM741.361806 640.27893H284.42846a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788174a22.378321 22.378321 0 0 1 22.378321-22.378321H741.361806a22.378321 22.378321 0 0 1 22.378321 22.378321v94.788174a22.378321 22.378321 0 0 1-22.378321 22.378321z m-434.555025-44.756642H718.983485v-50.031532H306.806781v50.031532zM909.103306 640.27893h-94.820143a22.378321 22.378321 0 0 1-22.378321-22.378321v-94.788174a22.378321 22.378321 0 0 1 22.378321-22.378321h94.820143a22.378321 22.378321 0 0 1 22.378321 22.378321v94.788174a22.378321 22.378321 0 0 1-22.378321 22.378321z m-72.441822-44.756642h50.063501v-50.031532h-50.063501v50.031532zM308.123905 947.533277c-53.580094 0-104.350111-32.15445-125.363354-84.874578a134.190003 134.190003 0 0 1-9.616285-49.846111c0-55.520614 33.337304-104.688983 84.935319-125.261054a22.381518 22.381518 0 0 1 16.575942 41.572527c-34.475402 13.746683-56.751422 46.594861-56.751422 83.688527 0 11.358596 2.164303 22.554151 6.438563 33.27976 18.372602 46.099341 70.840174 68.66628 116.958696 50.28089l308.088739-122.761075a22.375124 22.375124 0 0 1 29.072636 12.506285 22.378321 22.378321 0 0 1-12.506284 29.072636l-308.085542 122.761075a134.209185 134.209185 0 0 1-49.747008 9.581118z"
+                  fill="#4F46A3"
+                />
+                <path
+                  d="M804.283251 879.989111a22.381518 22.381518 0 0 1-20.792658-14.095146c-18.385389-46.112129-70.840174-68.66628-116.926727-50.290481a22.378321 22.378321 0 0 1-16.579139-41.572526c33.430015-13.331086 70.053735-12.838762 103.128894 1.390652 33.068765 14.223021 58.618413 40.466398 71.949499 73.896413a22.378321 22.378321 0 0 1-20.779869 30.671088z"
+                  fill="#4F46A3"
+                />
+              </svg>
+              <p>keyboard</p>
+            </a>
+          </span>
+          <!-- mic -->
+          <span class="text-center hover:scale-105 hover:drop-shadow-xl">
+            <a href="#">
+              <svg class="w-[30px] mx-auto" viewBox="-20 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>34-multimeda-mic-stand-up</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="3.Multimedia" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                  <g id="Multimedia-(Color)" transform="translate(-718.000000, -702.000000)" stroke="#263238" stroke-width="3.5">
+                    <g id="34-multimeda-mic-stand-up" transform="translate(720.000000, 704.000000)">
+                      <rect id="Layer-1" fill="#CFD8DC" x="10" y="0" width="40" height="70" rx="20"></rect>
+                      <path d="M10,20 L20,20" id="Layer-2" fill="#E2F3FB"></path>
+                      <path d="M10,30 L20,30" id="Layer-3" fill="#E2F3FB"></path>
+                      <path d="M10,40 L20,40" id="Layer-4" fill="#E2F3FB"></path>
+                      <path d="M10,50 L20,50" id="Layer-5" fill="#E2F3FB"></path>
+                      <path d="M40,50 L50,50" id="Layer-6" fill="#E2F3FB"></path>
+                      <path d="M40,40 L50,40" id="Layer-7" fill="#E2F3FB"></path>
+                      <path d="M40,30 L50,30" id="Layer-8" fill="#E2F3FB"></path>
+                      <path d="M40,20 L50,20" id="Layer-9" fill="#E2F3FB"></path>
+                      <path d="M60,49.9927367 C60,66.5652906 46.5721855,80 30,80 L30,80 C13.4314575,80 0,66.5673744 0,49.9927367" id="Layer-10"></path>
+                      <path d="M30,80 L30,100" id="Layer-11" fill="#E2F3FB"></path>
+                      <path d="M10,100 L50,100" id="Layer-12" fill="#E2F3FB"></path>
+                      <path d="M0,50 L3,50" id="Layer-13" fill="#E2F3FB"></path>
+                      <path d="M57,50 L60,50" id="Layer-14" fill="#E2F3FB"></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <p class="mxz">mic</p>
+            </a>
+          </span>
+          <!-- headset -->
+          <span class="text-center hover:scale-105 hover:drop-shadow-xl">
+            <a href="#">
+              <svg class="w-[30px] mx-auto" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                <g>
+                  <path
+                    style="fill: #2b3b4e"
+                    d="M329.266,385.293h-44.822V366.33h44.822c17.11,0,31.03-13.921,31.03-31.03v-44.822h18.963V335.3
+C379.259,362.867,356.833,385.293,329.266,385.293z"
+                  />
+                  <path
+                    style="fill: #2b3b4e"
+                    d="M390.465,290.478h-41.374v-85.333c0-51.331-41.76-93.091-93.091-93.091s-93.091,41.76-93.091,93.091
+v85.333h-41.374v-85.333c0-74.143,60.321-134.465,134.465-134.465s134.465,60.321,134.465,134.465V290.478z"
+                  />
+                </g>
+                <path
+                  style="fill: #324a5e"
+                  d="M167.65,318.923h-51.141c-18.884,0-34.19-15.308-34.19-34.19v-45.396
+c-0.002-18.884,15.307-34.192,34.19-34.192h51.141V318.923z"
+                />
+                <path
+                  style="fill: #2b3b4e"
+                  d="M82.316,262.322v22.411c0,18.882,15.308,34.19,34.192,34.19h51.141v-56.601L82.316,262.322
+L82.316,262.322z"
+                />
+                <rect x="142.222" y="205.145" style="fill: #fc6f58" width="28.444" height="113.778" />
+                <path
+                  style="fill: #324a5e"
+                  d="M344.35,205.145h51.143c18.884,0,34.192,15.308,34.192,34.192v45.396
+c0,18.884-15.308,34.19-34.19,34.19h-51.143L344.35,205.145z"
+                />
+                <path
+                  style="fill: #2b3b4e"
+                  d="M344.35,262.322v56.601h51.141c18.884,0,34.192-15.308,34.192-34.19v-22.411L344.35,262.322
+L344.35,262.322z"
+                />
+                <rect x="341.333" y="205.145" style="fill: #fc6f58" width="28.444" height="113.778" />
+                <g>
+                  <rect x="142.222" y="262.327" style="fill: #f1543f" width="28.444" height="56.601" />
+                  <rect x="341.333" y="262.327" style="fill: #f1543f" width="28.444" height="56.601" />
+                </g>
+                <path
+                  style="fill: #fc6f58"
+                  d="M225.566,396.498h53.97c8.661,0,15.681-7.021,15.681-15.681v-10.011
+c0-8.661-7.021-15.681-15.681-15.681h-53.97c-8.661,0-15.681,7.021-15.681,15.681v10.011
+C209.886,389.477,216.907,396.498,225.566,396.498z"
+                />
+              </svg>
+              <p>headset</p>
+            </a>
+          </span>
+          <!-- pc -->
+          <span class="text-center hover:scale-105 hover:drop-shadow-xl">
+            <a href="#">
+              <svg version="1.1" class="w-[30px] mx-auto" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                <g>
+                  <path
+                    style="fill: #0ba4e0"
+                    d="M432.592,335.984l-14.064-7.632c52-95.904,2.96-158.272,0.832-160.88l12.384-10.144
+C434.144,160.288,489.92,230.272,432.592,335.984z"
+                  />
+                  <path
+                    style="fill: #0ba4e0"
+                    d="M463.76,359.2l-14.064-7.632c66.88-123.328,3.568-203.6,0.832-206.96l12.384-10.144
+C463.648,135.376,535.968,226.064,463.76,359.2z"
+                  />
+                  <path
+                    style="fill: #0ba4e0"
+                    d="M79.424,335.984c-57.344-105.712-1.568-175.696,0.832-178.64l12.384,10.144
+c-2.128,2.608-51.184,64.976,0.832,160.88L79.424,335.984z"
+                  />
+                  <path
+                    style="fill: #0ba4e0"
+                    d="M48.24,359.2c-72.208-133.12,0.112-223.808,0.848-224.72l12.384,10.144
+c-2.736,3.36-66.048,83.632,0.832,206.96L48.24,359.2z"
+                  />
+                </g>
+                <rect x="139.392" style="fill: #333333" width="233.2" height="512" />
+                <rect x="179.056" y="88.352" style="fill: #ffffff" width="40.816" height="15.312" />
+                <rect x="179.056" y="58.976" style="fill: #0ba4e0" width="154.288" height="15.312" />
+                <rect x="235.584" y="88.352" style="fill: #d6d6d6" width="40.816" height="15.312" />
+                <rect x="235.584" y="441.68" style="fill: #0ba4e0" width="40.816" height="15.312" />
+                <rect x="292.112" y="88.352" style="fill: #ffffff" width="40.816" height="15.312" />
+              </svg>
+              <p>pc</p>
+            </a>
+          </span>
+        </div>
+
+        <!-- PRODUK terkini -->
+        <a href="#">
+          <div class="w-full h-[282px] bg-tirdth">
+            <h3 class="w-full bg-primary text-center text-2xl">TERLARIS</h3>
+            <div class="w-full px-4 flex flex-wrap justify-center items-center gap-2 bg-secondary h-[88.5%]">
+              <div class="w-48 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
+                <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
+                <p class="text-black text-lg font-medium">rumah dicina</p>
+                <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+                <p class="mt-2 text-black text-base font-semibold">
+                  Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+                </p>
+              </div>
+              <div class="w-48 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
+                <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
+                <p class="text-black text-lg font-medium">rumah dicina</p>
+                <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+                <p class="mt-2 text-black text-base font-semibold">
+                  Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+                </p>
+              </div>
+              <div class="w-48 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
+                <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
+                <p class="text-black text-lg font-medium">rumah dicina</p>
+                <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+                <p class="mt-2 text-black text-base font-semibold">
+                  Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+    </section>
+
+    <!-- PRODUK DISKON -->
+    <section class="w-full h-[300px] bg-tirdth">
+      <div class="w-full flex justify-between bg-primary px-4 items-center">
+        <h3 class="text-2xl">PRODUK DISKON</h3>
+        <a href="#" class="text-white inline-block hover:text-black text-xs"><p>lihat semua >></p></a>
+      </div>
+      <div class="w-full p-4 flex flex-wrap justify-center items-center gap-4 bg-secondary h-[88.5%]">
+        <div class="w-52 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
+          <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
+          <p class="text-black text-xl font-medium px-1">monitor</p>
+          <p class="text-primary text-lg px-1">hemat sampai <span class="bg-primary rounded-lg px-2 py-1 text-white w-full text-center block text-xl">50%</span></p>
+        </div>
+        <div class="w-52 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
+          <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
+          <p class="text-black text-xl font-medium px-1">monitor</p>
+          <p class="text-primary text-lg px-1">hemat sampai <span class="bg-primary rounded-lg px-2 py-1 text-white w-full text-center block text-xl">50%</span></p>
+        </div>
+        <div class="w-52 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
+          <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
+          <p class="text-black text-xl font-medium px-1">monitor</p>
+          <p class="text-primary text-lg px-1">hemat sampai <span class="bg-primary rounded-lg px-2 py-1 text-white w-full text-center block text-xl">50%</span></p>
+        </div>
+        <div class="w-52 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
+          <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
+          <p class="text-black text-xl font-medium px-1">monitor</p>
+          <p class="text-primary text-lg px-1">hemat sampai <span class="bg-primary rounded-lg px-2 py-1 text-white w-full text-center block text-xl">50%</span></p>
+        </div>
+        <div class="w-52 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
+          <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
+          <p class="text-black text-xl font-medium px-1">monitor</p>
+          <p class="text-primary text-lg px-1">hemat sampai <span class="bg-primary rounded-lg px-2 py-1 text-white w-full text-center block text-xl">50%</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REKOMENDASI -->
+    <section class="w-full border-b">
+      <div class="w-full flex bg-primary px-4 mb-4">
+        <h3 class="text-2xl mx-auto">REKOMENDASI</h3>
+      </div>
+      <div class="grid grid-cols-2 container mb-8 md:grid-cols-4 lg::grid-cols-6 md:mx-auto">
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
+          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
+          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
+          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
+          <p class="mt-2 text-black text-base font-semibold px-1">
+            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
+          </p>
+          <div class="flex gap-4 px-1">
+            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
+              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
+            </a>
+            <span class="flex gap-1">
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
+              <i data-feather="star" class="w-5 font-bold"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex px-4 mb-4">
+        <a href="#" class="inline-block hover:shadow-md mx-auto border-2 px-8 w-1/2 py-1 bg-primary text-center"><h3 class="text-xl">lebih banyak</h3></a>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+  <footer class="flex gap-8 container mt-10">
+    <div class="w-1/3">
+      <h4 class="text-base text-primary">jelajahi inmart</h4>
+      <ul class="leading-snug">
+        <li class="ps-1 text-sm text-slate-400">
+          <a href="#">tentang kami</a>
+        </li>
+        <li class="ps-1 text-sm text-slate-400">
+          <a href="#">tentang kami</a>
+        </li>
+        <li class="ps-1 text-sm text-slate-400">
+          <a href="#">tentang kami</a>
+        </li>
+        <li class="ps-1 text-sm text-slate-400">
+          <a href="#">tentang kami</a>
+        </li>
+        <li class="ps-1 text-sm text-slate-400">
+          <a href="#">tentang kami</a>
+        </li>
+      </ul>
+    </div>
+    <div class="w-1/3">
+      <h4 class="text-base text-primary">jelajahi inmart</h4>
+      <div class="flex flex-wrap"></div>
+    </div>
+  </footer>
+</html>
