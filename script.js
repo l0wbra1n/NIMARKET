@@ -116,14 +116,6 @@ tc.onclick = () => {
   cart.classList.toggle("active-cart");
 };
 
-// load barang
-var tl = document.getElementById("load");
-var rekomendasi = document.getElementById("REKOMENDASI");
-
-tl.onclick = () => {
-  rekomendasi.classList.remove("hidden");
-};
-
 // menghilangkan element
 
 document.onclick = function (e) {
@@ -137,11 +129,3 @@ document.onclick = function (e) {
     cart.classList.remove("active-cart");
   }
 };
-
-// <div class="w-52 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
-//   <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
-//   <p class="text-black text-xl font-medium px-1">monitor</p>
-//   <p class="text-primary text-lg px-1">
-//     hemat sampai <span class="bg-primary rounded-lg px-2 py-1 text-white w-full text-center block text-xl">50%</span>
-//   </p>
-// </div>;
