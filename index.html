@@ -13,40 +13,80 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@100;300&display=swap" rel="stylesheet" />
   </head>
-  <body class="h-[3000px]">
+  <body class="h-[3000px] bg-slate-200 relative">
     <!-- navbar -->
-    <header class="w-full fixed bg-secondary flex justify-between text-white px-4 z-50 h-8 items-center lg:px-8 lg:h-10">
+    <header class="w-full fixed bg-secondary flex justify-between text-white px-4 z-50 h-12 items-center lg:px-8 lg:h-14">
       <div class="">
         <a href="" class="font-bold lg:text-2xl">NI<span>MART</span></a>
       </div>
-      <nav class="absolute top-full bg-white w-1/2 -right-72 duration-300 px-4 h-screen transition-all lg:static lg:h-auto lg:bg-transparent lg:w-auto lg:text-xl lg:flex justify-between items-center gap-4" id="menu-nav">
-        <a href="#" class="block py-1 font-light hover:text-primary hover:shadow-md border-b-2 hover:border-secondary duration-200 lg:inline-block lg:p-0 lg:border-none">home</a>
-        <a href="#" class="block py-1 font-light hover:text-primary hover:shadow-md border-b-2 hover:border-secondary duration-200 lg:inline-block lg:p-0 lg:border-none">kategori</a>
-        <a href="#" class="block py-1 font-light hover:text-primary hover:shadow-md border-b-2 hover:border-secondary duration-200 lg:inline-block lg:p-0 lg:border-none"> terlaris</a>
-        <a href="#" class="block py-1 font-light hover:text-primary hover:shadow-md border-b-2 hover:border-secondary duration-200 lg:inline-block lg:p-0 lg:border-none">terbaru</a>
+      <nav
+        class="absolute top-full bg-white md:w-[25rem] w-48 -right-full duration-300 h-screen transition-all lg:static lg:h-auto lg:bg-transparent lg:w-auto lg:text-xl text-base lg:flex lg:justify-center lg:items-center gap-4"
+        id="menu-nav"
+      >
+        <a href="#" class="block p-2 hover:text-primary font-semibold lg: text-black hover:bg-tirdth hover:shadow-md border-b-2 hover:border-secondary duration-200 lg:inline-block lg:p-0 lg:border-none">home</a>
+        <a href="#" class="block p-2 font-semibold text-black hover:text-primary hover:shadow-md border-b-2 hover:border-secondary duration-200 lg:inline-block lg:p-0 lg:border-none">kategori</a>
+        <a href="#" class="block p-2 hover:text-primary hover:shadow-md border-b-2 hover:border-secondary duration-200 lg:inline-block lg:p-0 lg:border-none font-semibold text-black"> terlaris</a>
+        <a href="#rekomendasi" class="block p-2 font-semibold text-black hover:text-primary hover:shadow-md border-b-2 hover:border-secondary duration-200 lg:inline-block lg:p-0 lg:border-none">REKOMENDASI</a>
       </nav>
-      <div class="absolute -top-10 opacity-15 left-32 transition-all duration-300 -z-10 lg:left-[68%] lg:w-[500px]" id="search">
-        <input type="search" name="search" id="search-box" placeholder="search here" class="w-44 rounded-b-md px-4 py-1 text-white lg:w-2/3" />
+      <div class="absolute scale-y-0 top-full w-3/4 left-11 rounded-b-md transition-all duration-[0.3s] md:left-1/3 -z-10 lg:left-1/2" id="search">
+        <input type="search" name="search" id="search-box" placeholder="search here" class="w-full h-full md:w-2/3 rounded-b-md px-4 py-1 text-white lg:w-1/2" />
       </div>
       <div class="flex gap-4 pe-4">
-        <a href="#" id="ts" class="icon-s text-xl hover:text-black hover:shadow-lg"><i data-feather="search" class="w-5 font-bold"></i></a>
-        <a href="#" id="tc" class="text-xl hover:text-black hover:shadow-lg"><i data-feather="shopping-cart" class="w-5 font-bold"></i></a>
-        <a href="#" id="hamburger" class="lg:hidden"><i data-feather="menu" class="w-5 font-bold"></i></a>
+        <a href="#" id="ts" class="icon-s text-xl hover:text-black hover:shadow-lg"><i data-feather="search" class="w-7 font-bold"></i></a>
+        <a href="#" id="tc" class="text-xl hover:text-black hover:shadow-lg"><i data-feather="shopping-cart" class="w-7 font-bold"></i></a>
+        <a href="#" id="hamburger" class="lg:hidden"><i data-feather="menu" class="w-7 font-bold"></i></a>
       </div>
-      <div class="w-52 h-screen bg-white absolute top-full -right-72 transition-all duration-300" id="cart-menu">agdkauwgd</div>
+      <div class="lg:w-[25rem] md:w-[30rem] h-screen bg-white absolute top-full -right-[300%] transition-all duration-300 px-4" id="cart-menu">
+        <div class="w-full px-2 border-b-primary flex relative pb-2">
+          <img src="dist/img/howard-bouchevereau-Db-tzBhd500-unsplash.jpg" class="w-16 h-16 px-2 mt-4" alt="" srcset="" />
+          <div class="">
+            <h3>man`s clottes</h3>
+            <p class="text-black text-base font-semibold px-2 lg:text-xl lg:font-bold md:mt-0.5 max-w-[12rem] lg:w-full md:w-full md:leading-5 lg:leading-6">BAJU HITAM LAKI CASSUAL</p>
+            <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+            <i data-feather="trash-2" class="w-7 font-bold text-black absolute right-3 top-9"></i>
+          </div>
+        </div>
+        <div class="w-full px-2 border-b-primary flex relative pb-2">
+          <img src="dist/img/howard-bouchevereau-Db-tzBhd500-unsplash.jpg" class="w-16 h-16 px-2 mt-4" alt="" srcset="" />
+          <div class="">
+            <h3>man`s clottes</h3>
+            <p class="text-black text-base font-semibold px-2 lg:text-xl lg:font-bold md:mt-0.5 max-w-[12rem] lg:w-full md:w-full md:leading-5 lg:leading-6">BAJU HITAM LAKI CASSUAL</p>
+            <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+            <i data-feather="trash-2" class="w-7 font-bold text-black absolute right-3 top-9"></i>
+          </div>
+        </div>
+        <div class="w-full px-2 border-b-primary flex relative pb-2">
+          <img src="dist/img/howard-bouchevereau-Db-tzBhd500-unsplash.jpg" class="w-16 h-16 px-2 mt-4" alt="" srcset="" />
+          <div class="">
+            <h3>man`s clottes</h3>
+            <p class="text-black text-base font-semibold px-2 lg:text-xl lg:font-bold md:mt-0.5 md:leading-5 lg:leading-6 max-w-[12rem] lg:w-full md:w-full">BAJU HITAM LAKI CASSUAL</p>
+            <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+            <i data-feather="trash-2" class="w-7 font-bold text-black absolute right-3 top-9"></i>
+          </div>
+        </div>
+        <div class="w-full px-2 border-b-primary flex relative pb-2">
+          <img src="dist/img/howard-bouchevereau-Db-tzBhd500-unsplash.jpg" class="w-16 h-16 px-2 mt-4" alt="" srcset="" />
+          <div class="">
+            <h3>man`s clottes</h3>
+            <p class="text-black text-base font-semibold px-2 lg:text-xl lg:font-bold md:mt-0.5 md:leading-5 lg:leading-6 max-w-[12rem] lg:w-full md:w-full">BAJU HITAM LAKI CASSUAL</p>
+            <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+            <i data-feather="trash-2" class="w-7 font-bold text-black absolute right-3 top-9"></i>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- hero -->
-    <section class="w-full pb-4 bg-hero-pattern lg:bg-hero-landing bg-cover bg-no-repeat bg-center pt-24 lg:pt-40 lg:object-fill">
+    <section class="w-full pb-4 bg-hero-pattern lg:h-[40vh] md:h-[45vh] lg:bg-hero-landing bg-cover bg-no-repeat bg-center pt-24 lg:pt-40 lg:object-fill">
       <div class="container">
-        <div class="flex flex-wrap justify-center items-center lg:px-4 lg:justify-center w-full">
-          <div class="flex flex-wrap justify-around items-center ms-10 w-full lg:ps-72 lg:justify-center">
-            <a href="#" class="w-1/2 text-primary px-4 text-base inline-block lg:ps-14 font-semibold">PRODUK</a>
-            <a href="#" class="w-1/2 text-primary text-base inline-block lg:ps-14 font-semibold">LAYANAN</a>
+        <div class="flex flex-wrap justify-center lg:px-4 mx-auto w-full">
+          <div class="flex flex-wrap items-center justify-center w-full text-center">
+            <a href="#" class="w-1/2 text-primary px-4 text-base inline-block font-semibold mx-auto">PRODUK</a>
+            <a href="#" class="w-1/2 text-primary text-base inline-block font-semibold">LAYANAN</a>
           </div>
 
           <div class="w-full mt-8 mx-auto block">
-            <input type="search" class="w-full rounded-full py-2 px-8 lg:w-5/6 mx-auto block" />
+            <input type="search" class="w-full rounded-full py-2 px-8 lg:w-5/6 lg:h-12 mx-auto block" />
             <button type="button" class="bg-primary rounded-full px-8 py-2 mt-4 block ms-auto lg:me-24">search</button>
           </div>
         </div>
@@ -54,25 +94,31 @@
     </section>
 
     <!-- marketing -->
-    <section class="w-full flex justify-between">
+    <section class="w-full h-auto lg:h-[60vh] lg:flex lg:justify-between mb-6 border-b-primary-[0.8px]">
       <!-- crousel -->
-      <div class="relative w-full lg:w-1/2 h-[205px] lg:h-full object-cover">
-        <div class="absolute -z-10 w-full h-full lg:h-[400px] object-cover object-right slide active transition-all duration-300">
-          <img src="dist/img/nicolas-gonzalez-183F_vNaN8A-unsplash.jpg" class="h-full object-cover w-full z-10 rounded-b-lg" alt="" srcset="" />
+      <div class="relative w-full h-[250px] md:h-full lg:w-1/2 object-cover lg:h-full">
+        <div class="absolute left-4 top-2/3 z-10 w-[60px]" id="bl">
+          <i data-feather="arrow-left-circle" class="w-[60px] font-bold"></i>
         </div>
-        <div class="object-cover object-right absolute -z-10 w-full slide active transition-all duration-300 h-full lg:h-[400px]">
-          <img src="dist/img/c-d-x-PDX_a_82obo-unsplash.jpg" class="h-full object-cover z-10 w-full rounded-b-lg" alt="" srcset="" />
+        <div class="absolute w-full h-full object-cover object-right slide transition-all duration-300 active">
+          <img src="dist/img/monitor.jpg" class="h-full object-cover w-full z-10 rounded-b-lg" alt="" srcset="" />
         </div>
-        <div class="absolute -z-10 w-full slide active transition-all duration-300 h-full lg:h-[400px] object-cover object-right">
-          <img src="dist/img/ed-rojas-quvUXEIlE3U-unsplash.jpg" class="h-full object-cover z-10 w-full rounded-b-lg" alt="" srcset="" />
+        <div class="object-cover object-right absolute w-full slide transition-all duration-300 h-full active">
+          <img src="dist/img/headset.jpg" class="h-full object-cover z-10 w-full rounded-b-lg" alt="" srcset="" />
         </div>
-        <div class="absolute -z-10 w-full slide active transition-all duration-300 h-full lg:h-[400px] object-cover object-right slide active">
-          <img src="dist/img/howard-bouchevereau-Db-tzBhd500-unsplash.jpg" class="h-full object-cover z-10 w-full rounded-b-lg" alt="" srcset="" />
+        <div class="absolute w-full slide transition-all duration-300 h-full object-cover object-right active">
+          <img src="dist/img/mic.jpg" class="h-full object-cover z-10 w-full rounded-b-lg" alt="" srcset="" />
         </div>
-        <div class="absolute -z-10 w-full slide active transition-all duration-300 h-full lg:h-[400px] object-cover object-right">
-          <img src="dist/img/maar-gaming-fG4BTSKPo3w-unsplash.jpg" class="h-full z-10 w-full rounded-b-lg object-fill object-center" alt="" srcset="" />
+        <div class="absolute w-full slide transition-all duration-300 h-full object-cover object-right active">
+          <img src="dist/img/pc.jpg" class="h-full object-cover z-10 w-full rounded-b-lg" alt="" srcset="" />
         </div>
-        <div class="z-10 absolute flex left-1/2 -translate-x-1/2 top-40 lg:top-[19rem]">
+        <div class="absolute w-full slide transition-all duration-300 h-full object-cover object-right active">
+          <img src="dist/img/mouse.jpg" class="h-full z-10 w-full rounded-b-lg object-fill object-center" alt="" srcset="" />
+        </div>
+        <div class="absolute right-4 top-2/3 z-10 w-[60px]" id="br">
+          <i data-feather="arrow-right-circle" class="w-[60px] font-bold"></i>
+        </div>
+        <div class="z-10 absolute flex lg:top-[90%] left-[40%]">
           <div class="bg-slate-100 w-4 h-4 m-2 rounded-full opacity-30 cursor-pointer hover:bg-slate-200 hover:opacity-50 btn active"></div>
           <div class="cursor-pointer bg-slate-100 w-4 h-4 m-2 rounded-full opacity-30 hover:bg-slate-200 hover:opacity-50 btn active"></div>
           <div class="cursor-pointer bg-slate-100 w-4 h-4 m-2 rounded-full opacity-30 hover:bg-slate-200 hover:opacity-50 btn active"></div>
@@ -82,13 +128,13 @@
       </div>
 
       <!-- marketing bagian kanan -->
-      <section class="lg:w-1/2 w-full">
+      <div class="lg:w-1/2 w-full">
         <!-- kategori -->
-        <div class="w-full px-4 flex flex-wrap justify-center items-center gap-8 bg-secondary p-8">
+        <div class="w-full px-8 flex flex-wrap justify-center items-center gap-8 py-4 bg-primary md:h-auto lg:h-auto">
           <!-- monitor -->
-          <span class="p-0 text-center hover:scale-105 hover:drop-shadow-xl">
+          <span class="text-center hover:scale-105 hover:drop-shadow-xl">
             <a href="#">
-              <svg class="w-[30px] mx-auto" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve">
+              <svg class="w-[30px] lg:w-12 md:w-10 mx-auto" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve">
                 <path
                   style="fill: #ccd8e5"
                   d="M503.665,66.8v316.343c0,17.908-14.509,32.429-32.417,32.429H40.754
@@ -134,7 +180,7 @@ c-0.364,7.534,9.106,11.629,14.33,6.172C264.674,387.282,265.089,382.887,262.925,3
           <!-- maouse -->
           <span class="text-center hover:scale-105 hover:drop-shadow-xl">
             <a href="#">
-              <svg class="w-[30px] mx-auto" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <svg class="w-[30px] lg:w-12 md:w-10 mx-auto" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
                 <path style="fill: #444; stroke: #333" d="M 29,19 C 26,15 23,16 18,15 10,14 5.7,8.5 4.7,-0.42 l 5.1,-0 C 9.8,-0.43 8.9,10 22,11 c 6,0 9,2 11,6 1,1 -4,2 -4,2 z" />
                 <path style="fill: #444; stroke: #333; stroke-width: 2" d="m 67,20 c 14,9 26,24 30,39 2,9 3,26 -11,33 C 71,99 57,100 41,88 26,76 12,59 6.8,52 3.4,48 1.9,44 2.5,37 2.4,32 2.2,31 13,25 36,15 46,16 54,16 c 7,0 13,4 13,4 z" />
                 <path
@@ -147,13 +193,13 @@ c-0.364,7.534,9.106,11.629,14.33,6.172C264.674,387.282,265.089,382.887,262.925,3
 
                 <path style="fill: none; stroke: #222222; stroke-width: 2" d="M 72,4 C 86,8 94,18 98,29 M 67,11 c 11,4 19,9 24,20 M 1.2,67 C 5.8,80 15,89 26,97 M 7.1,64 C 13,75 18,80 25,86" />
               </svg>
-              <p>mouse</p>
+              <p class="text-base font-medium">mouse</p>
             </a>
           </span>
           <!-- keyboard -->
           <span class="text-center hover:scale-105 hover:drop-shadow-xl">
             <a href="#">
-              <svg viewBox="0 0 1024 1024" class="icon w-[30px] mx-auto" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 1024 1024" class="icon w-[30px] lg:w-12 md:w-10 mx-auto" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M974.256189 160.040161v484.13899c0 31.585402-25.607193 57.192595-57.192594 57.192595H115.823796c-31.585402 0-57.192595-25.607193-57.192595-57.192595V160.040161c0-31.585402 25.607193-57.192595 57.192595-57.192595h801.239799c31.585402 0 57.192595 25.607193 57.192594 57.192595z m-64.609409 294.498704v-269.051356h-94.820143V359.750692h-139.41694v94.788173h234.237083z m-0.543474 163.361744v-94.788174h-94.820143v94.788174h94.820143z m-138.873466-337.624926v-94.788174h-94.820143v94.788174h94.820143z m-28.868034 337.624926v-94.788174H284.42846v94.788174H741.361806z m-110.548906-163.361744v-94.788173h-94.788174v94.788173h94.788174z m0-174.263182v-94.788174h-94.788174v94.788174h94.788174z m-139.41694 174.263182v-94.788173h-94.788174v94.788173h94.788174z m0-174.263182v-94.788174h-94.788174v94.788174h94.788174z m-139.384971 174.263182v-94.788173H257.190846v94.788173h94.820143z m0-174.263182v-94.788174H257.190846v94.788174h94.820143zM212.59405 617.900609v-94.788174H117.773907v94.788174H212.59405z m0-163.361744v-94.788173H117.773907v94.788173H212.59405z m0-174.263182v-94.788174H117.773907v94.788174H212.59405z"
                   fill="#FFB578"
@@ -198,13 +244,13 @@ c-0.364,7.534,9.106,11.629,14.33,6.172C264.674,387.282,265.089,382.887,262.925,3
                   fill="#4F46A3"
                 />
               </svg>
-              <p>keyboard</p>
+              <p class="text-base font-medium">keyboard</p>
             </a>
           </span>
           <!-- mic -->
           <span class="text-center hover:scale-105 hover:drop-shadow-xl">
             <a href="#">
-              <svg class="w-[30px] mx-auto" viewBox="-20 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <svg class="w-[30px] lg:w-12 md:w-10 mx-auto" viewBox="-20 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>34-multimeda-mic-stand-up</title>
                 <desc>Created with Sketch.</desc>
                 <defs></defs>
@@ -229,13 +275,13 @@ c-0.364,7.534,9.106,11.629,14.33,6.172C264.674,387.282,265.089,382.887,262.925,3
                   </g>
                 </g>
               </svg>
-              <p class="mxz">mic</p>
+              <p class="text-base font-medium">mic</p>
             </a>
           </span>
           <!-- headset -->
           <span class="text-center hover:scale-105 hover:drop-shadow-xl">
             <a href="#">
-              <svg class="w-[30px] mx-auto" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+              <svg class="w-[30px] lg:w-12 md:w-10 mx-auto" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
                 <g>
                   <path
                     style="fill: #2b3b4e"
@@ -281,13 +327,13 @@ c0-8.661-7.021-15.681-15.681-15.681h-53.97c-8.661,0-15.681,7.021-15.681,15.681v1
 C209.886,389.477,216.907,396.498,225.566,396.498z"
                 />
               </svg>
-              <p>headset</p>
+              <p class="text-base font-medium">headset</p>
             </a>
           </span>
           <!-- pc -->
           <span class="text-center hover:scale-105 hover:drop-shadow-xl">
             <a href="#">
-              <svg version="1.1" class="w-[30px] mx-auto" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+              <svg version="1.1" class="w-[30px] lg:w-12 md:w-10 mx-auto" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
                 <g>
                   <path
                     style="fill: #0ba4e0"
@@ -317,75 +363,74 @@ c-2.736,3.36-66.048,83.632,0.832,206.96L48.24,359.2z"
                 <rect x="235.584" y="441.68" style="fill: #0ba4e0" width="40.816" height="15.312" />
                 <rect x="292.112" y="88.352" style="fill: #ffffff" width="40.816" height="15.312" />
               </svg>
-              <p>pc</p>
+              <p class="text-base font-medium">COMPUTER</p>
             </a>
           </span>
         </div>
 
         <!-- PRODUK terkini -->
-        <a href="#">
-          <div class="w-full h-[282px] bg-tirdth">
-            <h3 class="w-full bg-primary text-center text-2xl">TERLARIS</h3>
-            <div class="w-full px-4 flex flex-wrap justify-center items-center gap-2 bg-secondary h-[88.5%]">
-              <div class="w-48 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
-                <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
-                <p class="text-black text-lg font-medium">rumah dicina</p>
-                <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-                <p class="mt-2 text-black text-base font-semibold">
-                  Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-                </p>
+
+        <div class="w-full h-auto">
+          <h3 class="w-full text-2xl py-2 px-4 border-b-[0.8px]">TERLARIS</h3>
+          <div class="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 h-auto px-4 md:gap-8 lg:h-[90%]">
+            <div class="h-auto bg-transparent hover:scale-105 hover:shadow-lg leading-relaxed mb-2 pb-2">
+              <img src="dist/img/man`s clossts casual.png" class="h-44 md:h-48 object-cover p-5 pb-2 w-full rounded-sm" alt="" id="button" />
+              <p class="text-slate-500 text-sm px-2 md:text-slate-400">man`s cloting</p>
+              <p class="text-black text-base font-semibold px-2 lg:text-xl lg:font-bold md:mt-0.5 md:text-lg lg:leading-6 md:leading-5">BAJU HITAM LAKI CASSUAL</p>
+              <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+
+              <div class="flex justify-between items-center hover:bg-primary hover:border p-2 lg:p-2 rounded-lg transition-all duration-300" id="harga">
+                <p class="text-black text-lg md:text-xl lg:text-xl font-semibold px-1 inline-block">$50.00</p>
+                <i data-feather="shopping-cart" class="inline-block w-10 h-8 lg:h-10 font-bold rounded-full bg-slate-600 text-white py-2 px-1 fill-current"></i>
               </div>
-              <div class="w-48 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
-                <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
-                <p class="text-black text-lg font-medium">rumah dicina</p>
-                <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-                <p class="mt-2 text-black text-base font-semibold">
-                  Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-                </p>
+            </div>
+            <div class="h-auto bg-transparent hover:scale-105 hover:shadow-lg leading-relaxed mb-2 pb-2">
+              <img src="dist/img/man`s clossts casual.png" class="h-44 md:h-48 object-cover p-5 pb-2 w-full rounded-sm" alt="" id="button" />
+              <p class="text-slate-500 text-sm px-2 md:text-slate-400">man`s cloting</p>
+              <p class="text-black text-base font-semibold px-2 lg:text-xl lg:font-bold md:mt-0.5 md:text-lg lg:leading-6 md:leading-5">BAJU HITAM LAKI CASSUAL</p>
+              <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+
+              <div class="flex justify-between items-center hover:bg-primary hover:border p-2 lg:p-2 rounded-lg transition-all duration-300" id="harga">
+                <p class="text-black text-lg md:text-xl lg:text-xl font-semibold px-1 inline-block">$50.00</p>
+                <i data-feather="shopping-cart" class="inline-block w-10 h-8 lg:h-10 font-bold rounded-full bg-slate-600 text-white py-2 px-1 fill-current"></i>
               </div>
-              <div class="w-48 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
-                <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
-                <p class="text-black text-lg font-medium">rumah dicina</p>
-                <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-                <p class="mt-2 text-black text-base font-semibold">
-                  Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-                </p>
+            </div>
+            <div class="h-auto bg-transparent hover:scale-105 hover:shadow-lg leading-relaxed mb-2 pb-2">
+              <img src="dist/img/man`s clossts casual.png" class="h-44 md:h-48 object-cover p-5 pb-2 w-full rounded-sm" alt="" id="button" />
+              <p class="text-slate-500 text-sm px-2 md:text-slate-400">man`s cloting</p>
+              <p class="text-black text-base font-semibold px-2 lg:text-xl lg:font-bold md:mt-0.5 md:text-lg lg:leading-6 md:leading-5">BAJU HITAM LAKI CASSUAL</p>
+              <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+
+              <div class="flex justify-between items-center hover:bg-primary hover:border p-2 lg:p-2 rounded-lg transition-all duration-300" id="harga">
+                <p class="text-black text-lg md:text-xl lg:text-xl font-semibold px-1 inline-block">$50.00</p>
+                <i data-feather="shopping-cart" class="inline-block w-10 h-8 lg:h-10 font-bold rounded-full bg-slate-600 text-white py-2 px-1 fill-current"></i>
+              </div>
+            </div>
+            <div class="h-auto bg-transparent hover:scale-105 hover:shadow-lg leading-relaxed mb-2 pb-2">
+              <img src="dist/img/man`s clossts casual.png" class="h-44 md:h-48 object-cover p-5 pb-2 w-full rounded-sm" alt="" id="button" />
+              <p class="text-slate-500 text-sm px-2 md:text-slate-400">man`s cloting</p>
+              <p class="text-black text-base font-semibold px-2 lg:text-xl lg:font-bold md:mt-0.5 md:text-lg lg:leading-6 md:leading-5">BAJU HITAM LAKI CASSUAL</p>
+              <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+
+              <div class="flex justify-between items-center hover:bg-primary hover:border p-2 lg:p-2 rounded-lg transition-all duration-300" id="harga">
+                <p class="text-black text-lg md:text-xl lg:text-xl font-semibold px-1 inline-block">$50.00</p>
+                <i data-feather="shopping-cart" class="inline-block w-10 h-8 lg:h-10 font-bold rounded-full bg-slate-600 text-white py-2 px-1 fill-current"></i>
               </div>
             </div>
           </div>
-        </a>
-      </section>
+        </div>
+      </div>
     </section>
 
     <!-- PRODUK DISKON -->
-    <section class="w-full h-[300px] bg-tirdth">
-      <div class="w-full flex justify-between bg-primary px-4 items-center">
+    <section class="w-full h-auto bg-white container mb-8 pb-4">
+      <div class="w-full flex justify-between border-b-[0.8px] py-2 px-4 items-center">
         <h3 class="text-2xl">PRODUK DISKON</h3>
-        <a href="#" class="text-white inline-block hover:text-black text-xs"><p>lihat semua >></p></a>
+        <a href="#" class="inline-block text-black text-xs"><p>lihat semua >></p></a>
       </div>
-      <div class="w-full p-4 flex flex-wrap justify-center items-center gap-4 bg-secondary h-[88.5%]">
-        <div class="w-52 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
-          <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
-          <p class="text-black text-xl font-medium px-1">monitor</p>
-          <p class="text-primary text-lg px-1">hemat sampai <span class="bg-primary rounded-lg px-2 py-1 text-white w-full text-center block text-xl">50%</span></p>
-        </div>
-        <div class="w-52 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
-          <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
-          <p class="text-black text-xl font-medium px-1">monitor</p>
-          <p class="text-primary text-lg px-1">hemat sampai <span class="bg-primary rounded-lg px-2 py-1 text-white w-full text-center block text-xl">50%</span></p>
-        </div>
-        <div class="w-52 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
-          <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
-          <p class="text-black text-xl font-medium px-1">monitor</p>
-          <p class="text-primary text-lg px-1">hemat sampai <span class="bg-primary rounded-lg px-2 py-1 text-white w-full text-center block text-xl">50%</span></p>
-        </div>
-        <div class="w-52 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
-          <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
-          <p class="text-black text-xl font-medium px-1">monitor</p>
-          <p class="text-primary text-lg px-1">hemat sampai <span class="bg-primary rounded-lg px-2 py-1 text-white w-full text-center block text-xl">50%</span></p>
-        </div>
-        <div class="w-52 h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
-          <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-3/5 w-full rounded-sm" alt="" />
+      <div class="w-full py-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 grid-flow-row gap-4 h-full">
+        <div class="md:w-52 md:h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
+          <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-52 w-full rounded-sm" alt="" />
           <p class="text-black text-xl font-medium px-1">monitor</p>
           <p class="text-primary text-lg px-1">hemat sampai <span class="bg-primary rounded-lg px-2 py-1 text-white w-full text-center block text-xl">50%</span></p>
         </div>
@@ -393,427 +438,108 @@ c-2.736,3.36-66.048,83.632,0.832,206.96L48.24,359.2z"
     </section>
 
     <!-- REKOMENDASI -->
-    <section class="w-full border-b">
-      <div class="w-full flex bg-primary px-4 mb-4">
+    <section class="w-full h-auto container bg-white" id="rekomendasi">
+      <div class="w-full border-b-[0.8px] py-2 px-4 mb-4">
         <h3 class="text-2xl mx-auto">REKOMENDASI</h3>
       </div>
-      <div class="grid grid-cols-2 container mb-8 md:grid-cols-4 lg::grid-cols-6 md:mx-auto">
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
+      <div class="grid grid-cols-2 mb-8 md:grid-cols-4 lg:grid-cols-5 mx-auto gap-2 h-auto">
+        <div class="h-[20rem] lg:h-auto md:h-auto bg-transparent hover:scale-105 hover:shadow-lg p-2 pt-0 leading-relaxed mb-2">
+          <img src="dist/img/man`s clossts casual.png" class="lg:h-52 md:h-44 h-40 object-cover p-5 pt-3 w-full rounded-sm" alt="" id="button" />
+          <p class="text-slate-500 text-sm px-2 md:text-slate-400">man`s cloting</p>
+          <p class="text-black text-base font-semibold px-2 lg:text-xl w-full lg:font-bold lg:leading-6 md:leading-5 md:text-lg md:mt-0.5">BAJU HITAM LAKI CASSUAL</p>
+          <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+
+          <div class="flex justify-between items-center hover:bg-primary hover:border p-2 lg:p-2 hover:md:p-2 rounded-lg transition-all duration-300 mb-0.5" id="harga">
+            <p class="text-black text-xl lg:text-xl font-semibold px-1 inline-block md:text-xl">$50.00</p>
+            <i data-feather="shopping-cart" class="inline-block w-14 h-8 font-bold rounded-full bg-slate-600 text-white py-2 px-1 fill-current"></i>
           </div>
         </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
+        <div class="h-[20rem] lg:h-auto md:h-auto bg-transparent hover:scale-105 hover:shadow-lg p-2 pt-0 leading-relaxed mb-2">
+          <img src="dist/img/man`s clossts casual.png" class="lg:h-52 md:h-44 h-40 object-cover p-5 pt-3 w-full rounded-sm" alt="" id="button" />
+          <p class="text-slate-500 text-sm px-2 md:text-slate-400">man`s cloting</p>
+          <p class="text-black text-base font-semibold px-2 lg:text-xl w-full lg:font-bold lg:leading-6 md:leading-5 md:text-lg md:mt-0.5">BAJU HITAM LAKI CASSUAL</p>
+          <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+
+          <div class="flex justify-between items-center hover:bg-primary hover:border p-2 lg:p-2 hover:md:p-2 rounded-lg transition-all duration-300 mb-0.5" id="harga">
+            <p class="text-black text-xl lg:text-xl font-semibold px-1 inline-block md:text-xl">$50.00</p>
+            <i data-feather="shopping-cart" class="inline-block w-14 h-8 font-bold rounded-full bg-slate-600 text-white py-2 px-1 fill-current"></i>
           </div>
         </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
-          </div>
-        </div>
-        <div class="w-48 h-[19rem] bg-transparent hover:scale-105 hover:shadow-lg mb-4">
-          <img src="dist/terlaris/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg " class="h-3/5 w-full rounded-sm relative" alt="" />
-          <p class="text-black text-lg font-medium px-1">rumah dicina</p>
-          <p class="mt-2 text-primary text-base"><span class="bg-primary rounded-lg px-4 py-1 text-white">50% off</span> deal</p>
-          <p class="mt-2 text-black text-base font-semibold px-1">
-            Rp.50.000 <span class="text-xs">harga <span class="line-through">Rp.100.000</span></span>
-          </p>
-          <div class="flex gap-4 px-1">
-            <a href="#" class="text-xl hover:text-black hover:shadow-lg">
-              <i data-feather="shopping-cart" class="w-5 font-bold"></i>
-            </a>
-            <span class="flex gap-1">
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold text-yellow-300 fill-current"></i>
-              <i data-feather="star" class="w-5 font-bold"></i>
-            </span>
+        <div class="h-[20rem] lg:h-auto md:h-auto bg-transparent hover:scale-105 hover:shadow-lg p-2 pt-0 leading-relaxed mb-2">
+          <img src="dist/img/man`s clossts casual.png" class="lg:h-52 md:h-44 h-40 object-cover p-5 pt-3 w-full rounded-sm" alt="" id="button" />
+          <p class="text-slate-500 text-sm px-2 md:text-slate-400">man`s cloting</p>
+          <p class="text-black text-base font-semibold px-2 lg:text-xl w-full lg:font-bold lg:leading-6 md:leading-5 md:text-lg md:mt-0.5">BAJU HITAM LAKI CASSUAL</p>
+          <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+
+          <div class="flex justify-between items-center hover:bg-primary hover:border p-2 lg:p-2 hover:md:p-2 rounded-lg transition-all duration-300 mb-0.5" id="harga">
+            <p class="text-black text-xl lg:text-xl font-semibold px-1 inline-block md:text-xl">$50.00</p>
+            <i data-feather="shopping-cart" class="inline-block w-14 h-8 font-bold rounded-full bg-slate-600 text-white py-2 px-1 fill-current"></i>
           </div>
         </div>
       </div>
       <div class="w-full flex px-4 mb-4">
-        <a href="#" class="inline-block hover:shadow-md mx-auto border-2 px-8 w-1/2 py-1 bg-primary text-center"><h3 class="text-xl">lebih banyak</h3></a>
+        <a href="#" class="inline-block w-full hover:shadow-md mx-auto border-2 px-8 lg:w-1/2 md:w-1/2 py-1 bg-primary text-center"><h3 class="text-xl">lebih banyak</h3></a>
       </div>
     </section>
 
+    <footer class="flex gap-8 container mt-10">
+      <div class="w-1/3">
+        <h4 class="text-base text-primary">jelajahi inmart</h4>
+        <ul class="leading-snug">
+          <li class="ps-1 text-sm text-slate-400">
+            <a href="#">tentang kami</a>
+          </li>
+          <li class="ps-1 text-sm text-slate-400">
+            <a href="#">tentang kami</a>
+          </li>
+          <li class="ps-1 text-sm text-slate-400">
+            <a href="#">tentang kami</a>
+          </li>
+          <li class="ps-1 text-sm text-slate-400">
+            <a href="#">tentang kami</a>
+          </li>
+          <li class="ps-1 text-sm text-slate-400">
+            <a href="#">tentang kami</a>
+          </li>
+        </ul>
+      </div>
+      <div class="w-1/3">
+        <h4 class="text-base text-primary">jelajahi inmart</h4>
+        <div class="flex flex-wrap"></div>
+      </div>
+    </footer>
+
+    <!-- <div class="w-1/2 h-80 mx-auto absolute top-[25%] bottom-1/2 left-[25%] rigth-[25%] transition-all duration-200 bg-slate-50 rounded-lg" id="fly-menu">
+      <div class="w-auto h-full bg-transparent px-2 hover: hover:shadow-lg leading-relaxed flex">
+        <img src="dist/img/man`s clossts casual.png" class="px-4 py-1 h-full w-56 object-fill rounded-sm relative" alt="" />
+        <div class="py-2">
+          <p class="text-black text-xl font-medium mt-0.5">baju - pria hitam cassual tanpa nego nego saya tabok</p>
+          <p class="text-xs text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+
+          <div class="w-full">
+            <h3>deskirpsi produk</h3>
+            <span class="text-slate-500 text-sm">
+              <p>barang ini merukapakan barang original buatan negara tercita indonesia jadi cepat beli kamu</p>
+            </span>
+            <div class="flex gap-2 pt-2 items-center">
+              <img src="dist/img/mini.jpg" class="h-20 w-20" alt="" />
+              <img src="dist/img/mini.jpg" class="h-20 w-20" alt="" />
+              <img src="dist/img/mini.jpg" class="h-20 w-20" alt="" />
+              <img src="dist/img/mini.jpg" class="h-20 w-20" alt="" />
+            </div>
+          </div>
+
+          <div class="flex justify-between mt-6 hover:bg-primary hover:border ps-0.5 pe-2 py-2 rounded-lg transition-all duration-300" id="harga">
+            <p class="text-black text-base font-semibold px-1 inline-block">$50.00</p>
+            <i data-feather="shopping-cart" class="inline-block w-10 font-bold rounded-full bg-slate-600 text-white p-1 fill-current"></i>
+          </div>
+        </div>
+      </div>
+    </div> -->
     <script src="script.js"></script>
 
     <script>
       feather.replace();
     </script>
   </body>
-  <footer class="flex gap-8 container mt-10">
-    <div class="w-1/3">
-      <h4 class="text-base text-primary">jelajahi inmart</h4>
-      <ul class="leading-snug">
-        <li class="ps-1 text-sm text-slate-400">
-          <a href="#">tentang kami</a>
-        </li>
-        <li class="ps-1 text-sm text-slate-400">
-          <a href="#">tentang kami</a>
-        </li>
-        <li class="ps-1 text-sm text-slate-400">
-          <a href="#">tentang kami</a>
-        </li>
-        <li class="ps-1 text-sm text-slate-400">
-          <a href="#">tentang kami</a>
-        </li>
-        <li class="ps-1 text-sm text-slate-400">
-          <a href="#">tentang kami</a>
-        </li>
-      </ul>
-    </div>
-    <div class="w-1/3">
-      <h4 class="text-base text-primary">jelajahi inmart</h4>
-      <div class="flex flex-wrap"></div>
-    </div>
-  </footer>
 </html>
