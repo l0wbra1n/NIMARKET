@@ -4,18 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <!-- css -->
     <link rel="stylesheet" href="dist/output.css" />
+
     <!-- icon -->
     <script src="https://unpkg.com/feather-icons"></script>
+
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@100;300&display=swap" rel="stylesheet" />
+
+    <!-- alpine js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- app -->
+    <script src="src/app.js"></script>
   </head>
   <body class="h-[3000px] bg-slate-200 relative">
     <!-- navbar -->
-    <header class="w-full fixed bg-secondary flex justify-between text-white px-4 z-50 h-12 items-center lg:px-8 lg:h-14">
+    <header class="w-full fixed bg-secondary flex justify-between text-white px-4 z-50 h-12 items-center lg:px-8 lg:h-14" x-data="products">
       <div class="">
         <a href="" class="font-bold lg:text-2xl">NI<span>MART</span></a>
       </div>
@@ -33,46 +42,30 @@
       </div>
       <div class="flex gap-4 pe-4">
         <a href="#" id="ts" class="icon-s text-xl hover:text-black hover:shadow-lg"><i data-feather="search" class="w-7 font-bold"></i></a>
-        <a href="#" id="tc" class="text-xl hover:text-black hover:shadow-lg"><i data-feather="shopping-cart" class="w-7 font-bold"></i></a>
+        <a href="#" id="tc" class="text-xl hover:text-black hover:shadow-lg relative">
+          <i data-feather="shopping-cart" class="w-7"></i>
+          <span class="absolute -right-2 top-4 bg-red-500 text-xs px-1 rounded-lg" x-show="$store.cart.quantity" x-text="$store.cart.quantity">10</span>
+        </a>
         <a href="#" id="hamburger" class="lg:hidden"><i data-feather="menu" class="w-7 font-bold"></i></a>
       </div>
       <div class="lg:w-[25rem] md:w-[30rem] h-screen bg-white absolute top-full -right-[300%] transition-all duration-300 px-4" id="cart-menu">
-        <div class="w-full px-2 border-b-primary flex relative pb-2">
-          <img src="dist/img/howard-bouchevereau-Db-tzBhd500-unsplash.jpg" class="w-16 h-16 px-2 mt-4" alt="" srcset="" />
-          <div class="">
-            <h3>man`s clottes</h3>
-            <p class="text-black text-base font-semibold px-2 lg:text-xl lg:font-bold md:mt-0.5 max-w-[12rem] lg:w-full md:w-full md:leading-5 lg:leading-6">BAJU HITAM LAKI CASSUAL</p>
-            <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
-            <i data-feather="trash-2" class="w-7 font-bold text-black absolute right-3 top-9"></i>
+        <template x-for="(item, index) in $store.cart.items " x-key="index">
+          <div class="w-full px-2 border-b-primary flex items-center relative pb-2">
+            <img :src="`dist/img/${item.img}`" class="w-10 h-10 px-2 mt-4" :alt="item.name" srcset="" />
+            <div class="">
+              <h3>man`s clottes</h3>
+              <p class="text-black text-base font-semibold px-2 lg:text-lg lg:font-bold md:mt-0.5 max-w-[12rem] lg:w-full md:w-full md:leading-5 lg:leading-6" x-text="item.name"></p>
+              <div class="text-base text-slate-500 px-2 md:text-slate-400 gap-4">
+                <span x-text="number(item.price)"></span> &times;
+                <button class="bg-black px-2 py-0.5 text-white">&minus;</button>
+                <span x-text="item.quantity"></span>
+                <button class="bg-black px-2 py-0.5 text-white">&plus;</button> &equals;
+                <span x-text="item.total"></span>
+              </div>
+              <i data-feather="trash-2" class="w-5 text-black absolute right-3 top-9"></i>
+            </div>
           </div>
-        </div>
-        <div class="w-full px-2 border-b-primary flex relative pb-2">
-          <img src="dist/img/howard-bouchevereau-Db-tzBhd500-unsplash.jpg" class="w-16 h-16 px-2 mt-4" alt="" srcset="" />
-          <div class="">
-            <h3>man`s clottes</h3>
-            <p class="text-black text-base font-semibold px-2 lg:text-xl lg:font-bold md:mt-0.5 max-w-[12rem] lg:w-full md:w-full md:leading-5 lg:leading-6">BAJU HITAM LAKI CASSUAL</p>
-            <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
-            <i data-feather="trash-2" class="w-7 font-bold text-black absolute right-3 top-9"></i>
-          </div>
-        </div>
-        <div class="w-full px-2 border-b-primary flex relative pb-2">
-          <img src="dist/img/howard-bouchevereau-Db-tzBhd500-unsplash.jpg" class="w-16 h-16 px-2 mt-4" alt="" srcset="" />
-          <div class="">
-            <h3>man`s clottes</h3>
-            <p class="text-black text-base font-semibold px-2 lg:text-xl lg:font-bold md:mt-0.5 md:leading-5 lg:leading-6 max-w-[12rem] lg:w-full md:w-full">BAJU HITAM LAKI CASSUAL</p>
-            <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
-            <i data-feather="trash-2" class="w-7 font-bold text-black absolute right-3 top-9"></i>
-          </div>
-        </div>
-        <div class="w-full px-2 border-b-primary flex relative pb-2">
-          <img src="dist/img/howard-bouchevereau-Db-tzBhd500-unsplash.jpg" class="w-16 h-16 px-2 mt-4" alt="" srcset="" />
-          <div class="">
-            <h3>man`s clottes</h3>
-            <p class="text-black text-base font-semibold px-2 lg:text-xl lg:font-bold md:mt-0.5 md:leading-5 lg:leading-6 max-w-[12rem] lg:w-full md:w-full">BAJU HITAM LAKI CASSUAL</p>
-            <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
-            <i data-feather="trash-2" class="w-7 font-bold text-black absolute right-3 top-9"></i>
-          </div>
-        </div>
+        </template>
       </div>
     </header>
 
@@ -428,54 +421,38 @@ c-2.736,3.36-66.048,83.632,0.832,206.96L48.24,359.2z"
         <h3 class="text-2xl">PRODUK DISKON</h3>
         <a href="#" class="inline-block text-black text-xs"><p>lihat semua >></p></a>
       </div>
-      <div class="w-full py-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 grid-flow-row gap-4 h-full">
-        <div class="md:w-52 md:h-[15rem] bg-transparent hover:scale-105 hover:shadow-lg">
-          <img src="dist/terlaris/jennifer-r-sZ9F_XkGJfI-unsplash.jpg " class="h-52 w-full rounded-sm" alt="" />
-          <p class="text-black text-xl font-medium px-1">monitor</p>
-          <p class="text-primary text-lg px-1">hemat sampai <span class="bg-primary rounded-lg px-2 py-1 text-white w-full text-center block text-xl">50%</span></p>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 h-fit w-full lg:gap-2">
+        <div class="">
+          <img src="dist/img/quaritsch-photography-m2zuB8DqwyM-unsplash.jpg" alt="" />
+          <h3 class="text-xl text-center my-2">women clottes casuall</h3>
+          <a href="#" class=""><p class="w-full py-2 px-4 bg-primary rounded-lg text-lg text-center font-mono uppercase">up to50%</p></a>
         </div>
       </div>
     </section>
 
     <!-- REKOMENDASI -->
-    <section class="w-full h-auto container bg-white" id="rekomendasi">
+    <section class="w-full h-auto container bg-white" id="rekomendasi" x-data="products">
       <div class="w-full border-b-[0.8px] py-2 px-4 mb-4">
         <h3 class="text-2xl mx-auto">REKOMENDASI</h3>
       </div>
-      <div class="grid grid-cols-2 mb-8 md:grid-cols-4 lg:grid-cols-5 mx-auto gap-2 h-auto">
-        <div class="h-[20rem] lg:h-auto md:h-auto bg-transparent hover:scale-105 hover:shadow-lg p-2 pt-0 leading-relaxed mb-2">
-          <img src="dist/img/man`s clossts casual.png" class="lg:h-52 md:h-44 h-40 object-cover p-5 pt-3 w-full rounded-sm" alt="" id="button" />
-          <p class="text-slate-500 text-sm px-2 md:text-slate-400">man`s cloting</p>
-          <p class="text-black text-base font-semibold px-2 lg:text-xl w-full lg:font-bold lg:leading-6 md:leading-5 md:text-lg md:mt-0.5">BAJU HITAM LAKI CASSUAL</p>
-          <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
+      <div class="grid grid-cols-2 mb-8 md:grid-cols-4 lg:grid-cols-6 lg:grid-rows-6 mx-auto gap-2 h-fit">
+        <template x-for="(item, index) in items" x-key="index">
+          <div class="h-[20rem] lg:h-fit md:h-auto bg-transparent hover:scale-105 hover:shadow-lg p-2 pt-0 leading-relaxed mb-2 rounded-sm" id="button-detail">
+            <img :src="`dist/img/${item.img}`" class="lg:h-48 md:h-44 h-40 object-cover p-5 pt-3 w-full rounded-sm" :alt="item.name" id="button" />
+            <p class="text-slate-500 text-sm px-2 md:text-slate-400">man`s cloting</p>
+            <p class="text-black text-base font-semibold px-2 lg:text-xl w-full lg:font-bold lg:leading-6 md:leading-5 md:text-lg md:mt-0.5" x-text="item.name"></p>
+            <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
 
-          <div class="flex justify-between items-center hover:bg-primary hover:border p-2 lg:p-2 hover:md:p-2 rounded-lg transition-all duration-300 mb-0.5" id="harga">
-            <p class="text-black text-xl lg:text-xl font-semibold px-1 inline-block md:text-xl">$50.00</p>
-            <i data-feather="shopping-cart" class="inline-block w-14 h-8 font-bold rounded-full bg-slate-600 text-white py-2 px-1 fill-current"></i>
+            <div class="flex justify-between items-center hover:bg-primary hover:border p-2 hover:md:p-2 rounded-lg transition-all duration-300 mb-0.5" id="harga">
+              <p class="text-black text-xl lg:text-xl font-semibold px-1 inline-block md:text-xl" x-text="number(item.price)"></p>
+              <a href="#" class="w-7 h-7" @click.prevent="$store.cart.add(item)">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <use href="dist/feather-sprite.svg#shopping-cart" />
+                </svg>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="h-[20rem] lg:h-auto md:h-auto bg-transparent hover:scale-105 hover:shadow-lg p-2 pt-0 leading-relaxed mb-2">
-          <img src="dist/img/man`s clossts casual.png" class="lg:h-52 md:h-44 h-40 object-cover p-5 pt-3 w-full rounded-sm" alt="" id="button" />
-          <p class="text-slate-500 text-sm px-2 md:text-slate-400">man`s cloting</p>
-          <p class="text-black text-base font-semibold px-2 lg:text-xl w-full lg:font-bold lg:leading-6 md:leading-5 md:text-lg md:mt-0.5">BAJU HITAM LAKI CASSUAL</p>
-          <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
-
-          <div class="flex justify-between items-center hover:bg-primary hover:border p-2 lg:p-2 hover:md:p-2 rounded-lg transition-all duration-300 mb-0.5" id="harga">
-            <p class="text-black text-xl lg:text-xl font-semibold px-1 inline-block md:text-xl">$50.00</p>
-            <i data-feather="shopping-cart" class="inline-block w-14 h-8 font-bold rounded-full bg-slate-600 text-white py-2 px-1 fill-current"></i>
-          </div>
-        </div>
-        <div class="h-[20rem] lg:h-auto md:h-auto bg-transparent hover:scale-105 hover:shadow-lg p-2 pt-0 leading-relaxed mb-2">
-          <img src="dist/img/man`s clossts casual.png" class="lg:h-52 md:h-44 h-40 object-cover p-5 pt-3 w-full rounded-sm" alt="" id="button" />
-          <p class="text-slate-500 text-sm px-2 md:text-slate-400">man`s cloting</p>
-          <p class="text-black text-base font-semibold px-2 lg:text-xl w-full lg:font-bold lg:leading-6 md:leading-5 md:text-lg md:mt-0.5">BAJU HITAM LAKI CASSUAL</p>
-          <p class="text-sm text-slate-500 px-2 md:text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
-
-          <div class="flex justify-between items-center hover:bg-primary hover:border p-2 lg:p-2 hover:md:p-2 rounded-lg transition-all duration-300 mb-0.5" id="harga">
-            <p class="text-black text-xl lg:text-xl font-semibold px-1 inline-block md:text-xl">$50.00</p>
-            <i data-feather="shopping-cart" class="inline-block w-14 h-8 font-bold rounded-full bg-slate-600 text-white py-2 px-1 fill-current"></i>
-          </div>
-        </div>
+        </template>
       </div>
       <div class="w-full flex px-4 mb-4">
         <a href="#" class="inline-block w-full hover:shadow-md mx-auto border-2 px-8 lg:w-1/2 md:w-1/2 py-1 bg-primary text-center"><h3 class="text-xl">lebih banyak</h3></a>
@@ -487,31 +464,38 @@ c-2.736,3.36-66.048,83.632,0.832,206.96L48.24,359.2z"
         <h4 class="text-base text-primary">jelajahi inmart</h4>
         <ul class="leading-snug">
           <li class="ps-1 text-sm text-slate-400">
-            <a href="#">tentang kami</a>
+            <a href="#">home</a>
           </li>
           <li class="ps-1 text-sm text-slate-400">
-            <a href="#">tentang kami</a>
+            <a href="#">kategori</a>
           </li>
           <li class="ps-1 text-sm text-slate-400">
-            <a href="#">tentang kami</a>
+            <a href="#">diskon</a>
           </li>
           <li class="ps-1 text-sm text-slate-400">
-            <a href="#">tentang kami</a>
+            <a href="#">rekomendasi</a>
           </li>
           <li class="ps-1 text-sm text-slate-400">
-            <a href="#">tentang kami</a>
+            <a href="#">pesanan anda</a>
           </li>
         </ul>
       </div>
       <div class="w-1/3">
-        <h4 class="text-base text-primary">jelajahi inmart</h4>
-        <div class="flex flex-wrap"></div>
+        <h4 class="text-base text-primary">jalur pembayaran</h4>
+        <div class="flex flex-wrap">
+          <div class="bg-cyan-500 h-9 w-9"></div>
+        </div>
       </div>
     </footer>
 
-    <!-- <div class="w-1/2 h-80 mx-auto absolute top-[25%] bottom-1/2 left-[25%] rigth-[25%] transition-all duration-200 bg-slate-50 rounded-lg" id="fly-menu">
-      <div class="w-auto h-full bg-transparent px-2 hover: hover:shadow-lg leading-relaxed flex">
-        <img src="dist/img/man`s clossts casual.png" class="px-4 py-1 h-full w-56 object-fill rounded-sm relative" alt="" />
+    <!-- menu -->
+
+    <div class="justify-center items-center fixed left-0 right-0 lg:top-0 md:top-0 top-16 z-40 lg:h-full md:h-full h-3/4 w-full hidden" id="fly-menu">
+      <div class="relative lg:w-1/2 md:w-1/2 w-10/12 lg:h-fit md:h-fit h-fit bg-slate-50 px-2 hover: hover:shadow-lg leading-relaxed flex justify-center gap-4 m-auto rounded-lg p-4 md:flex-wrap lg:flex-nowrap flex-wrap">
+        <div class="w-10 h-10 font-bold rounded-full fill-current absolute p-1 -right-3 -top-3 bg-white z-50" id="remove-detail">
+          <i data-feather="x" class="w-full h-full"></i>
+        </div>
+        <img src="dist/img/man`s clossts casual.png" class="px-4 py-1 lg:h-full md:h-full h-32 w-56 lg:object-fill md:object-fill rounded-sm relative object-cover" alt="" />
         <div class="py-2">
           <p class="text-black text-xl font-medium mt-0.5">baju - pria hitam cassual tanpa nego nego saya tabok</p>
           <p class="text-xs text-slate-400"><i data-feather="star" class="inline-block w-3 font-bold mb-1 text-yellow-300 fill-current"></i> 3.9 | 123 review</p>
@@ -521,7 +505,7 @@ c-2.736,3.36-66.048,83.632,0.832,206.96L48.24,359.2z"
             <span class="text-slate-500 text-sm">
               <p>barang ini merukapakan barang original buatan negara tercita indonesia jadi cepat beli kamu</p>
             </span>
-            <div class="flex gap-2 pt-2 items-center">
+            <div class="flex gap-2 pt-2 items-center flex-wrap">
               <img src="dist/img/mini.jpg" class="h-20 w-20" alt="" />
               <img src="dist/img/mini.jpg" class="h-20 w-20" alt="" />
               <img src="dist/img/mini.jpg" class="h-20 w-20" alt="" />
@@ -535,7 +519,8 @@ c-2.736,3.36-66.048,83.632,0.832,206.96L48.24,359.2z"
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
+
     <script src="script.js"></script>
 
     <script>

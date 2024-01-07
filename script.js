@@ -95,6 +95,7 @@ repeat();
 // };
 // repeat();
 
+// tombol active
 var menu = document.getElementById("menu-nav");
 var hamburger = document.getElementById("hamburger");
 hamburger.onclick = (e) => {
@@ -120,11 +121,27 @@ tc.onclick = (e) => {
 };
 
 // detail produk
-const buttonProduk = document.getElementById("button");
-const produkDetail = document.getElementById("fly-menu");
+const bds = document.querySelectorAll("#button-detail");
+const detail = document.querySelector("#fly-menu");
+const remove = document.querySelector("#remove-detail");
 
-buttonProduk.onclick = () => {
-  produkDetail.classList.add("hidden");
+// buka menu
+bds.forEach((btn) => {
+  btn.onclick = (e) => {
+    detail.classList.toggle("window-detail");
+    e.preventDefault();
+  };
+});
+
+remove.onclick = () => {
+  detail.classList.remove("window-detail");
+};
+
+// click diluar menu
+window.onclick = (e) => {
+  if (e.target === detail) {
+    detail.classList.remove("window-detail");
+  }
 };
 
 // menghilangkan element
@@ -138,8 +155,5 @@ document.onclick = function (e) {
   }
   if (!tc.contains(e.target) && !cart.contains(e.target)) {
     cart.classList.remove("active-cart");
-  }
-  if (!buttonProduk.contains(e.target) && !produkDetail.contains(e.target)) {
-    produkDetail.classList.remove("detail");
   }
 };

@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300&family=Poppins:wght@100;300&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.slide {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.warna {
+  background-color: aqua;
+}
+
+.active {
+  clip-path: circle(150% at 0 50%);
+  background-color: #94a3b8;
+  opacity: 1;
+}
+
+*,
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.muncul {
+  right: 0%;
+  position: absolute;
+}
+
+.search-muncul {
+  transform: scaley(1);
+  transform-origin: top;
+  transition: 0.3 linear;
+}
+
+.active-cart {
+  right: 0;
+}
+
+.window-detail {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#remove-detail {
+  cursor: pointer;
+}
+
+#harga:hover {
+  clip-path: circle(150% at 0 50%);
+  opacity: 1;
+}
+
+#button {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* 
+
+<header class="w-full flex justify-between items-center px-4 h-12 fixed bg-tirdth z-20 top-0 left-0 right-0">
+      <a href="#" class="font-bold">NI<span>MART</span></a>
+      <nav class="absolute top-full px-4 bg-secondary w-2/3 -right-72 duration-300 transition-all" id="menu-nav">
+        <a href="#" class="block py-1 text-white font-light hover:text-primary border-b-2 hover:border-secondary duration-200">home</a>
+        <a href="#" class="block py-1 text-white font-light hover:text-primary border-b-2 hover:border-secondary duration-200">kategori</a>
+        <a href="#" class="block py-1 text-white font-light hover:text-primary border-b-2 hover:border-secondary duration-200"> terlaris</a>
+        <a href="#" class="block py-1 text-white font-light hover:text-primary border-b-2 hover:border-secondary duration-200">terbaru</a>
+      </nav>
+      <div class="flex gap-2">
+        <a href=""><i data-feather="search" class="w-5 font-bold"></i></a>
+        <a href=""><i data-feather="shopping-cart" class="w-5 font-bold"></i></a>
+        <a href="#" id="hamburger"><i data-feather="menu" class="w-5 font-bold"></i></a>
+      </div>
+    </header> */
