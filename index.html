@@ -57,9 +57,9 @@
               <p class="text-black text-base font-semibold px-2 lg:text-lg lg:font-bold md:mt-0.5 max-w-[12rem] lg:w-full md:w-full md:leading-5 lg:leading-6" x-text="item.name"></p>
               <div class="text-base text-slate-500 px-2 md:text-slate-400 gap-4">
                 <span x-text="number(item.price)"></span> &times;
-                <button class="bg-black px-2 py-0.5 text-white">&minus;</button>
+                <button class="bg-black px-2 py-0.5 text-white my-2 font-bold text-base">&minus;</button>
                 <span x-text="item.quantity"></span>
-                <button class="bg-black px-2 py-0.5 text-white">&plus;</button> &equals;
+                <button class="bg-black px-2 py-0.5 text-white my-2 font-bold text-base" @click="$store.cart.add(item)">&plus;</button> &equals;
                 <span x-text="item.total"></span>
               </div>
               <i data-feather="trash-2" class="w-5 text-black absolute right-3 top-9"></i>
@@ -437,7 +437,7 @@ c-2.736,3.36-66.048,83.632,0.832,206.96L48.24,359.2z"
       </div>
       <div class="grid grid-cols-2 mb-8 md:grid-cols-4 lg:grid-cols-6 lg:grid-rows-6 mx-auto gap-2 h-fit">
         <template x-for="(item, index) in items" x-key="index">
-          <div class="h-[20rem] lg:h-fit md:h-auto bg-transparent hover:scale-105 hover:shadow-lg p-2 pt-0 leading-relaxed mb-2 rounded-sm" id="button-detail">
+          <div class="h-[20rem] lg:h-fit md:h-auto bg-transparent hover:scale-105 hover:shadow-lg p-2 pt-0 leading-relaxed mb-2 rounded-sm" @click="" id="button-detail">
             <img :src="`dist/img/${item.img}`" class="lg:h-48 md:h-44 h-40 object-cover p-5 pt-3 w-full rounded-sm" :alt="item.name" id="button" />
             <p class="text-slate-500 text-sm px-2 md:text-slate-400">man`s cloting</p>
             <p class="text-black text-base font-semibold px-2 lg:text-xl w-full lg:font-bold lg:leading-6 md:leading-5 md:text-lg md:mt-0.5" x-text="item.name"></p>
