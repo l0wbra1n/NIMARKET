@@ -19,30 +19,33 @@ document.addEventListener("alpine:init", () => {
     total: 0,
     quantity: 0,
     add(newItem) {
-      // cek adakah barang yang sama dicart
-      const cartItem = this.items.find((item) => item.id === newItem);
+      const cartItem = this.items.find((item) => item.id === newItem.id);
 
-      // jika belum ada barang dicart
+      // jika cart kosong
       if (!cartItem) {
         this.items.push({ ...newItem, quantity: 1, total: newItem.price });
         this.quantity++;
         this.total += newItem.price;
       } else {
-        //  jika barang sudah ada dicart, cek apakah barang sudah ada dicart atau belum
+        // jika barang sudah ada, cheack apakah barang sudah ada dicart
         this.items = this.items.map((item) => {
           // jika barang berbeda
-          if (item.id !== newItem.id) {
+          if (item.id != newItem.id) {
             return item;
           } else {
-            // jika barang sudah ada tambah quantity totalnya
-            item.quantity++;
-            item.total = item.price * item.quantity;
-            this.quantity++;
-            this.total += item.price;
-            return item;
+            // jika barang sudah ada, tambah jumlah dan quantitynya
+            if (item.id === newItem.id) {
+              item.quantity++;
+              item.total = item.price * item.quantity;
+              this.quantity++;
+              this.total += item.price;
+              return item;
+            }
           }
         });
       }
+
+      console.log(this.total);
     },
   });
 });
