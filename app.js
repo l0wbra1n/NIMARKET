@@ -76,6 +76,24 @@ document.addEventListener("alpine:init", () => {
   });
 });
 
+const checkoutButton = document.querySelector(".disabled");
+checkoutButton.disabled = true;
+
+const form = document.querySelector("#form");
+
+form.addEventListener("keyup", function () {
+  for (let i = 0; i < form.elements.length; i++) {
+    if (form.elements[i].Value.length !== 0) {
+      checkoutButton.classList.remove("disabled");
+      checkoutButton.classList.add("disabled");
+    } else {
+      return false;
+    }
+  }
+  checkoutButton.disabled = false;
+  checkoutButton.classList.remove("disabled");
+});
+
 // konversi to rupiah
 const number = (number) => {
   return new Intl.NumberFormat("id-ID", {
