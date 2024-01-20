@@ -46,6 +46,11 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
 #remove-detail {
   cursor: pointer;
 }
